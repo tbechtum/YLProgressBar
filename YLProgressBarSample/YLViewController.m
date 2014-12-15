@@ -194,12 +194,22 @@
     _progressBarFlatAnimated.stripesAnimationVelocity = 1.8f;
 }
 
+// replaced original sample by Thomas Bechtum
+- (void)initRoundedSlimProgressBar
+{
+    [_progressBarRoundedSlim setType:YLProgressBarTypeRounded];
+    [_progressBarRoundedSlim setHideGloss:YES];
+    [_progressBarRoundedSlim setProgressTintColors:[NSArray arrayWithObjects:[UIColor colorWithRed:156.0/255.0 green:201.0/255.0 blue:0.0/255.0 alpha:1.0], nil]];
+    [_progressBarRoundedSlim setHideStripes:YES];
+    [_progressBarRoundedSlim setTrackTintColor:[UIColor colorWithRed:204.0/255.0 green:204.0/255.0 blue:204.0/255.0 alpha:1.0]]; // grey
+}
+/* original sample
 - (void)initRoundedSlimProgressBar
 {
     _progressBarRoundedSlim.progressTintColor        = [UIColor colorWithRed:239/255.0f green:225/255.0f blue:13/255.0f alpha:1.0f];
     _progressBarRoundedSlim.indicatorTextDisplayMode = YLProgressBarIndicatorTextDisplayModeTrack;
     _progressBarRoundedSlim.stripesColor             = [UIColor colorWithRed:0 green:0 blue:0 alpha:0.36f];
-}
+}*/
 
 - (void)initRoundedFatProgressBar
 {

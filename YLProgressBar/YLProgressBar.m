@@ -22,6 +22,7 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  *
+ * No inner glow is needed for the track - 2014 commented this in drawTrack by Thomas Bechtum
  */
 
 #import "YLProgressBar.h"
@@ -386,12 +387,12 @@ const NSTimeInterval YLProgressBarProgressTime         = 0.25f;        // s
                                                               cornerRadius:_cornerRadius];
             [shadow stroke];
             
-            // Draw the inner glow
+            /* Draw the inner glow
             [[UIColor colorWithRed:0 green:0 blue:0 alpha:0.4f] set];
             
             UIBezierPath *glow = [UIBezierPath bezierPathWithRoundedRect:CGRectMake(_cornerRadius, 0, CGRectGetWidth(rect) - _cornerRadius * 2, 1)
                                                             cornerRadius:0];
-            [glow stroke];
+            [glow stroke];*/
         }
     }
     CGContextRestoreGState(context);
